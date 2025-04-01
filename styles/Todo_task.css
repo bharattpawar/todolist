@@ -1,4 +1,7 @@
+/* Todo_task.css - Complete Stylesheet */
+
 :root {
+  /* Color Variables */
   --primary-color: #6c5ce7;
   --text-color: #2d3436;
   --light-text: #636e72;
@@ -7,11 +10,14 @@
   --glass-border: rgba(255, 255, 255, 0.5);
   --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  /* Priority Colors */
   --high-priority: #ff4444;
   --medium-priority: #ffbb33;
   --low-priority: #00C851;
 }
 
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +25,19 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Container Styles */
 .modern-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 1rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  background-attachment: fixed;
 }
 
 .glass-card {
@@ -39,12 +50,14 @@
   box-shadow: var(--shadow);
   padding: 1.5rem;
   transition: var(--transition);
+  margin: 1rem 0;
 }
 
 .glass-card:hover {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
 }
 
+/* Header Styles */
 h1 {
   color: var(--primary-color);
   font-size: 2rem;
@@ -69,6 +82,7 @@ h1 {
   text-align: center;
 }
 
+/* Input and Button Styles */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -162,6 +176,7 @@ h1 {
   transform: translateY(-2px);
 }
 
+/* Filter Button Styles */
 .filter-buttons {
   display: flex;
   gap: 0.5rem;
@@ -194,6 +209,7 @@ h1 {
   color: white;
 }
 
+/* Task List Styles */
 .task-list {
   list-style: none;
   margin-bottom: 1.25rem;
@@ -315,6 +331,7 @@ h1 {
   font-style: italic;
 }
 
+/* Stats Section */
 .stats {
   display: flex;
   justify-content: space-between;
@@ -350,6 +367,271 @@ h1 {
   background: rgba(255, 118, 117, 0.1);
 }
 
+/* Quote Section */
+.quote-container {
+  background: rgba(108, 92, 231, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.quote-text {
+  font-style: italic;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-align: right;
+  font-size: 0.875rem;
+}
+
+.refresh-quote {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.refresh-quote:hover {
+  transform: rotate(180deg);
+}
+
+/* Calendar Events */
+.calendar-events {
+  background: rgba(255, 193, 7, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffc107;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.event-list {
+  list-style: none;
+}
+
+.event-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-time {
+  font-weight: 500;
+  color: #ffc107;
+  min-width: 60px;
+}
+
+.event-title {
+  color: var(--text-color);
+}
+
+.no-events {
+  color: var(--light-text);
+  font-style: italic;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* Integration Buttons */
+.integration-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.integration-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 20px;
+  color: var(--light-text);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.integration-btn:hover {
+  background: white;
+}
+
+.integration-btn.connected {
+  background: var(--primary-color);
+  color: white;
+}
+
+.calendar-btn {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.calendar-btn:hover {
+  background: rgba(255, 193, 7, 0.2);
+}
+
+/* Note Button */
+.note-btn {
+  background: transparent;
+  border: none;
+  color: #6c5ce7;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.note-btn:hover {
+  background: rgba(108, 92, 231, 0.1);
+  transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.note-modal {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+}
+
+.note-modal h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.note-content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.note-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.save-note-btn, .cancel-note-btn, .edit-note-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.save-note-btn {
+  background: var(--primary-color);
+  color: white;
+}
+
+.save-note-btn:hover {
+  background: #5649d1;
+}
+
+.cancel-note-btn {
+  background: #f5f5f5;
+  color: var(--text-color);
+}
+
+.cancel-note-btn:hover {
+  background: #e0e0e0;
+}
+
+.edit-note-btn {
+  background: #6c5ce7;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.edit-note-btn:hover {
+  background: #5649d1;
+}
+
+/* Error Text */
+.error-text {
+  color: var(--high-priority);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Drag and Drop Styles */
+.task-item {
+  user-select: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.task-item.dragging {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px 0 rgba(31, 38, 135, 0.2);
+  opacity: 0.8;
+}
+
+[role="button"] {
+  cursor: grab;
+}
+
+[role="button"]:active {
+  cursor: grabbing;
+}
+
+/* Responsive Styles */
 @media (min-width: 360px) {
   h1 {
       font-size: 2.25rem;
