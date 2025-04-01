@@ -1,0 +1,219 @@
+/* Base Styles */
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+  }
+  
+  .auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+  }
+  
+  .auth-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-header h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .auth-header p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  /* Social Login Buttons */
+  .social-login-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+    background: white;
+  }
+  
+  .social-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-button.google:hover {
+    background: #f8f9fa;
+  }
+  
+  .social-button.github {
+    background: #24292e;
+    color: white;
+    border-color: #24292e;
+  }
+  
+  .social-button.github:hover {
+    background: #1a1e22;
+  }
+  
+  .social-button.twitter {
+    background: #1da1f2;
+    color: white;
+    border-color: #1da1f2;
+  }
+  
+  .social-button.twitter:hover {
+    background: #1991db;
+  }
+  
+  .social-button.phone {
+    background: #25d366;
+    color: white;
+    border-color: #25d366;
+  }
+  
+  .social-button.phone:hover {
+    background: #1fba57;
+  }
+  
+  .social-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .divider::before {
+    margin-right: 1rem;
+  }
+  
+  .divider::after {
+    margin-left: 1rem;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+    outline: none;
+  }
+  
+  .auth-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .auth-button:hover {
+    background: #3a5bd9;
+    transform: translateY(-2px);
+  }
+  
+  .auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .auth-footer a {
+    color: #4a6cf7;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .auth-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-error {
+    color: #e74c3c;
+    background: #fdecea;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .auth-card {
+      padding: 1.5rem;
+    }
+    
+    .auth-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .social-button {
+      font-size: 0.85rem;
+      padding: 0.65rem;
+    }
+    
+    .form-group input,
+    .auth-button {
+      padding: 0.65rem 1rem;
+    }
+  }
