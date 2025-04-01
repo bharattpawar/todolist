@@ -1,23 +1,25 @@
 import React from 'react';
 import '../styles/Homepage.css';
-import { Link } from 'react-router';  // ✅ Import Link for navigation
-import { FiCheck, FiPlus, FiTrash2, FiFlag, FiArrowRight } from 'react-icons/fi';
+import { Link } from 'react-router';  // Updated import
+import { FiCheck, FiPlus, FiTrash2, FiFlag, FiArrowRight, FiUser, FiLogIn } from 'react-icons/fi';
 
 const Homepage = () => {
   return (
     <div className="modern-homepage">
+
+
       {/* Hero Section */}
       <header className="hero-section">
         <div className="hero-content">
-          <h1>Organize Your Tasks with </h1>
+          <h1>Organize Your Tasks with TaskFlow</h1>
           <p>The modern task management app with priority levels and intuitive filtering</p>
           <div className="cta-buttons">
-             <Link to="/todo" className="primary-button">
+            <Link to="/Login" className="primary-button">
               Get Started <span><FiArrowRight /></span>
             </Link>
-            <a href="#features" className="secondary-button">
-              Learn More
-            </a>
+            <Link to="/login" className="secondary-button">
+              Try Demo
+            </Link>
           </div>
         </div>
       </header>
